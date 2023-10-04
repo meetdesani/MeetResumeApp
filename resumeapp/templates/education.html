@@ -1,0 +1,59 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <style>
+        .main{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1 class="display-2">
+                Education
+                <i class="fa-solid fa-building-columns"></i>
+            </h1>
+            <hr>
+            <p class="main">
+                Please note that data is dynamic!
+            </p>
+            <br>
+            <br>
+        </div>
+        <div class="container-sm">
+            <section>
+                {% for i in e %}
+                <div class="card" >
+                    <div class="card-body">
+                      <h5 class="card-title display-6">{{ i.title }}</h5>
+                      <br>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Start Year: {{i.start_year}}</h6>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">End Year: {{i.end_year}}</h6>
+                      <br>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Institute: <br>{{i.institute}}</h6>
+                      <br>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">University: <br>{{i.university}}</h6>
+                      <br>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Grade: {{i.grade}}</h6>
+                      <br>
+                      </div>
+                  </div>
+                  <br>
+                {% endfor %}
+            </section>
+            <br>
+            <a href="{% url 'status' %}">
+                <button type="button" class="btn btn-primary"> 
+                    <i class="fa-solid fa-comment marginright10px"></i>
+                    Objective
+                </button>
+            </a>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+{% include "footer.html" %}
+{% endblock %}

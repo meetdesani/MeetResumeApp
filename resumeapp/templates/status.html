@@ -1,0 +1,42 @@
+{% extends 'header.html' %}
+{% block content %}
+<head>
+    <style>
+        .main{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-2">Objective
+            <i class="fa-solid fa-street-view"></i>
+        </h1>
+        <hr>
+        <p class="main">
+            With <strong>Three years</strong> of industry experience under my belt, 
+            I am now eager to transition into a technical role in the IT industry. 
+            I have a strong passion for <strong>Web development</strong>, but I am also open to exploring other 
+            IT technical roles if the right opportunity arises. I am highly motivated to build a 
+            stable and prosperous future in this field, leveraging my existing skills and acquiring new ones. 
+            I want to emphasize that I am ready for <Strong>Immediate employment</Strong> and am currently residing in South Bopal, 
+            Ahmedabad. In addition to my full-time career aspirations, I am actively freelancing in the IT domain. 
+            I am open to opportunities not only in Ahmedabad but also in nearby cities like Baroda and Gandhinagar. 
+            I am excited to contribute my knowledge and dedication to a dynamic IT team and embark on a rewarding career journey
+            in the technology sector.
+        </p>
+        <p>
+            -Regards, Meet.
+        </p>
+        <a href="{% url 'contactus' %}">
+            <button type="button" class="btn btn-primary"> 
+                <i class="fa-solid fa-handshake marginright10px"></i>
+                Contact Me
+            </button>    
+        </a>
+          <br>
+          <br>
+    </div>
+</body>
+{% include "footer.html" %}
+{% endblock %}

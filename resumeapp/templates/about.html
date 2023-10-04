@@ -1,0 +1,68 @@
+{% extends 'header.html' %}
+{% block content %}
+<head>
+    <style>
+        .main{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-2">
+            
+            About
+            <i class="fa-solid fa-id-badge"></i>
+        </h1>
+        <hr>
+        <p class="main">
+            I am a Web devloper at Ahmedabad, Gujarat. My working technology is Python.
+        </p>
+        <br>
+        <br>
+        <h2 class="display-6">Personal Information</h2>
+        <table class="table">
+            <thead>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td>Name</td>
+                <td>Meet Desani</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Date of Birth</td>
+                <td>2ed of June 1998</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Address</td>
+                <td>1002 Celesta, Sanvi Nirman, South Bopal,
+                    Ahmedabad.</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Email</td>
+                <td>lykenmeet@gmail.com | meetdesani@outlook.com</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Cell</td>
+                <td>+91 7600009306</td>
+              </tr>
+            </tbody>
+        </table>
+        <a href="{% url 'status' %}">
+            <button type="button" class="btn btn-primary"> 
+                <i class="fa-solid fa-comment marginright10px"></i>
+                Objective
+            </button>
+        </a>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+{% include "footer.html" %}
+{% endblock %}

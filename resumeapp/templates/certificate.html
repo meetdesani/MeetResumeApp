@@ -1,0 +1,46 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <style>
+        .card-img-top{
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-2">Certificate
+            <i class="fa-solid fa-award"></i>
+        </h1>
+        <hr>
+        <p class="main">
+            Please note that data is dynamic!
+        </p>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+          {% for i in c %}
+          <div class="card" style="width: 18rem;">
+            <img src="{{ i.certificate.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{i.title}}</h5>
+              <p class="card-text"></p>
+              <a href="https://drive.google.com/file/d/1SFPOMKvSPcMO2G-k0S6GQJBAfS3hy_Wd/view" class="btn btn-primary">Download Certificate</a>
+            </div>
+          </div>
+          {% endfor %}
+          <br>
+          <a href="{% url 'status' %}">
+            <button type="button" class="btn btn-primary"> 
+                <i class="fa-solid fa-comment marginright10px"></i>
+                Objective
+            </button>
+          </a>
+          <br>
+          <br>
+    </div>
+</body>
+{% include "footer.html" %}
+{% endblock %}
